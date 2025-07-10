@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"args": [
+				"main.py"
+			],
+			"problemMatcher": [],
+			"isBackground": true,
+			"label": "Run PDF Bot",
+			"type": "shell",
+			"command": "python",
+			"group": "build"
+		}
+	]
+}

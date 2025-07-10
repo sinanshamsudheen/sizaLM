@@ -1,0 +1,109 @@
+2025-07-10 12:02:48 | INFO     | app.app:startup_event:49 - Starting WhatsApp PDF Bot service
+2025-07-10 12:05:01 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:05:02 | INFO     | app.app:startup_event:49 - Starting WhatsApp PDF Bot service
+2025-07-10 12:05:40 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:05:41 | INFO     | app.app:startup_event:49 - Starting WhatsApp PDF Bot service
+2025-07-10 12:06:39 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:06:40 | INFO     | app.app:startup_event:49 - Starting WhatsApp PDF Bot service
+2025-07-10 12:07:21 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:07:22 | INFO     | app.app:startup_event:49 - Starting WhatsApp PDF Bot service
+2025-07-10 12:08:06 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:08:07 | INFO     | app.app:startup_event:49 - Starting WhatsApp PDF Bot service
+2025-07-10 12:10:16 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:10:17 | INFO     | app.app:startup_event:49 - Starting WhatsApp PDF Bot service
+2025-07-10 12:10:52 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:10:53 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:11:17 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:11:18 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:11:18 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:11:18 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:11:50 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:11:51 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:11:51 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:11:51 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:12:09 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:12:10 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:12:10 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:12:10 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:12:49 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:12:50 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:12:50 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:12:50 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:13:43 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:13:44 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:13:44 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:13:44 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:15:46 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:18:46 | INFO     | __main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:18:46 | INFO     | __main__:<module>:65 - Telegram bot thread started
+2025-07-10 12:18:46 | INFO     | __main__:start_telegram_bot:35 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 12:18:46 | INFO     | utils.logging:info:54 - Ensured upload directory exists: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:18:46 | INFO     | utils.logging:info:54 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 12:18:49 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:18:49 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:18:49 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:18:55 | INFO     | utils.logging:info:54 - Bot connected successfully: @SizaLMbot
+2025-07-10 12:18:55 | INFO     | utils.logging:info:54 - Bot details: {'id': 7967112184, 'is_bot': True, 'first_name': 'Siza', 'username': 'SizaLMbot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False, 'can_connect_to_business': False, 'has_main_web_app': False}
+2025-07-10 12:19:12 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:19:12 | INFO     | utils.logging:info:54 - Processing update ID: 803931080
+2025-07-10 12:19:12 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:19:12 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 12:19:19 | ERROR    | utils.logging:error:59 - Error sending Telegram message: 
+2025-07-10 12:19:19 | ERROR    | utils.logging:error:59 - Error handling Telegram update: 
+2025-07-10 12:19:21 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:19:38 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:19:38 | INFO     | utils.logging:info:54 - Processing update ID: 803931081
+2025-07-10 12:19:38 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:19:38 | INFO     | utils.logging:info:54 - Received document: OD432566653378478100.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAAMIaG9igZPaxQABb91EloNNn9CvlREwAAILGAACzwV5VxvhPd9Wsy82NgQ
+2025-07-10 12:19:38 | INFO     | utils.logging:info:54 - Processing PDF document: OD432566653378478100.pdf
+2025-07-10 12:19:39 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:19:39 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAAMIaG9igZPaxQABb91EloNNn9CvlREwAAILGAACzwV5VxvhPd9Wsy82NgQ, file_name=OD432566653378478100.pdf, chat_id=1550263754
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAAMIaG9igZPaxQABb91EloNNn9CvlREwAAILGAACzwV5VxvhPd9Wsy82NgQ
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - Downloaded PDF content: 571043 bytes
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - Saving PDF to disk: OD432566653378478100.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/OD432566653378478100.pdf
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/OD432566653378478100.pdf
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/OD432566653378478100.pdf
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - Extracted 3098 characters from PDF
+2025-07-10 12:19:43 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 12:19:44 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:19:44 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/OD432566653378478100.pdf
+2025-07-10 12:19:44 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/OD432566653378478100.pdf
+2025-07-10 12:19:50 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:19:50 | INFO     | utils.logging:info:54 - Processing update ID: 803931082
+2025-07-10 12:19:50 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:19:50 | INFO     | utils.logging:info:54 - Received text message: Summarize...
+2025-07-10 12:19:51 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:19:54 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 12:19:55 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:20:14 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:20:14 | INFO     | utils.logging:info:54 - Processing update ID: 803931083
+2025-07-10 12:20:14 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:20:14 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 12:20:15 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:21:04 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:21:04 | INFO     | utils.logging:info:54 - Processing update ID: 803931084
+2025-07-10 12:21:04 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:21:04 | INFO     | utils.logging:info:54 - Received document: Muhammed_Sinan_D.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAAMQaG9i103Hxx8_tiFKgyli1rckEHIAAg4YAALPBXlXPL7ThvW8-3M2BA
+2025-07-10 12:21:04 | INFO     | utils.logging:info:54 - Processing PDF document: Muhammed_Sinan_D.pdf
+2025-07-10 12:21:05 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:21:05 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAAMQaG9i103Hxx8_tiFKgyli1rckEHIAAg4YAALPBXlXPL7ThvW8-3M2BA, file_name=Muhammed_Sinan_D.pdf, chat_id=1550263754
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAAMQaG9i103Hxx8_tiFKgyli1rckEHIAAg4YAALPBXlXPL7ThvW8-3M2BA
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - Downloaded PDF content: 167382 bytes
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - Saving PDF to disk: Muhammed_Sinan_D.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - Extracted 5564 characters from PDF
+2025-07-10 12:21:08 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 12:21:09 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:21:09 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:21:09 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:21:25 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:21:25 | INFO     | utils.logging:info:54 - Processing update ID: 803931085
+2025-07-10 12:21:25 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:21:25 | INFO     | utils.logging:info:54 - Received text message: Wt are skills he hav...
+2025-07-10 12:21:27 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:21:30 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 12:21:31 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:22:42 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
