@@ -115,7 +115,159 @@ class ResponseTemplate:
                 response_parts.append("")  # Empty line for spacing
         
         return "\n".join(response_parts)
-
+    
+    @classmethod
+    def format_summary(cls, summary_text: str) -> str:
+        """
+        Format a document summary for nice display in Telegram using a hierarchical structure.
+        
+        Args:
+            summary_text: The summary text from the LLM
+            
+        Returns:
+            Formatted summary string with hierarchical structure and proper emphasis
+        """
+        # Add HTML formatting for Telegram
+        formatted_lines = []
+        in_bullet_list = False
+        current_heading_level = 0
+        
+        for line in summary_text.split('\n'):
+            line = line.strip()
+            if not line:
+                formatted_lines.append(line)
+                in_bullet_list = False
+                continue
+            
+            # Process headings with hierarchical structure
+            if line.isupper() or (len(line) < 80 and (
+                    line.endswith(':') or 
+                    line.startswith('#') or 
+                    'TOPIC' in line.upper() or 
+                    'SECTION' in line.upper())):
+                
+                # Determine heading level
+                if line.isupper() or 'TOPIC' in line.upper() or line.startswith('# '):
+                    # Major heading (H1)
+                    clean_line = line.replace('#', '').replace(':', '').strip()
+                    formatted_lines.append(f"\n<b><u>{clean_line.upper()}</u></b>\n")
+                    current_heading_level = 1
+                else:
+                    # Subheading (H2)
+                    clean_line = line.replace('##', '').replace(':', '').strip()
+                    formatted_lines.append(f"\n<b>{clean_line}</b>")
+                    current_heading_level = 2
+                
+                in_bullet_list = False
+            
+            # Handle bullet points
+            elif line.startswith('-') or line.startswith('•') or line.startswith('*'):
+                bullet_text = line[1:].strip()
+                
+                # Highlight key terms (terms in ALL CAPS or surrounded by * or _)
+                bullet_text = cls._highlight_key_terms(bullet_text)
+                
+                formatted_lines.append(f"• {bullet_text}")
+                in_bullet_list = True
+            
+            # Handle normal text - convert to bullet points for consistency if not following a heading
+            elif current_heading_level > 0:
+                # Highlight key terms in the text
+                formatted_text = cls._highlight_key_terms(line)
+                
+                if current_heading_level == 1:
+                    # For text under main headings, make it a bullet point if not already in a list
+                    if not in_bullet_list:
+                        formatted_lines.append(f"• {formatted_text}")
+                        in_bullet_list = True
+                    else:
+                        formatted_lines.append(f"  {formatted_text}")
+                else:
+                    # For text under subheadings
+                    formatted_lines.append(formatted_text)
+            
+            else:
+                # Regular text
+                formatted_text = cls._highlight_key_terms(line)
+                formatted_lines.append(formatted_text)
+        
+        return "\n".join(formatted_lines)
+    
+    @classmethod
+    def _highlight_key_terms(cls, text: str) -> str:
+        """
+        Highlight key terms in the text for better readability.
+        - Terms in ALL CAPS will be bolded
+        - Terms surrounded by * or _ will be bolded
+        - Common key phrases like "important", "key", "note" will be emphasized
+        
+        Args:
+            text: Original text
+            
+        Returns:
+            Text with key terms highlighted in bold
+        """
+        import re
+        
+        # First, escape any HTML tags that might already be in the text to prevent double formatting
+        # Check if there are already HTML tags and skip formatting if found
+        if "<b>" in text or "</b>" in text:
+            return text
+            
+        # Handle asterisk or underscore emphasis (* or _) - do this first to prevent conflicts
+        emphasis_pattern = r'(\*|_)(.*?)(\*|_)'
+        text = re.sub(emphasis_pattern, lambda m: f"<b>{m.group(2)}</b>", text)
+        
+        # Remove any remaining asterisks or underscores that weren't matched in pairs
+        text = text.replace('*', '').replace('_', '')
+            
+        # Find words in ALL CAPS (likely technical terms)
+        # More careful pattern to avoid already-bolded text
+        uppercase_pattern = r'\b[A-Z]{2,}[A-Z0-9]*\b'
+        
+        # Track positions of existing tags to avoid overlapping formatting
+        tag_positions = [(m.start(), m.end()) for m in re.finditer(r'<[^>]+>', text)]
+        
+        # Function to check if a position is inside any tag
+        def is_in_tag(pos):
+            return any(start <= pos <= end for start, end in tag_positions)
+            
+        # Process each uppercase match
+        matches = list(re.finditer(uppercase_pattern, text))
+        result = list(text)
+        
+        # Apply replacements in reverse to avoid position shifts
+        for match in reversed(matches):
+            start, end = match.span()
+            # Check if this match is inside any HTML tag
+            if not any(is_in_tag(pos) for pos in range(start, end)):
+                term = text[start:end]
+                replacement = f"<b>{term}</b>"
+                result[start:end] = list(replacement)
+        
+        text = ''.join(result)
+        
+        # Highlight important phrases - with more care to avoid overlapping with existing tags
+        for key_phrase in ["important", "key", "note", "critical", "essential", "significant"]:
+            if key_phrase in text.lower():
+                # Use a more careful approach to avoid formatting inside tags
+                pattern = re.compile(f'\\b({key_phrase})\\b', re.IGNORECASE)
+                
+                # Find all matches and replace only those not inside tags
+                matches = list(pattern.finditer(text))
+                result = list(text)
+                
+                for match in reversed(matches):
+                    start, end = match.span()
+                    if not any(is_in_tag(pos) for pos in range(start, end)):
+                        phrase = text[start:end]
+                        replacement = f"<b>{phrase}</b>"
+                        result[start:end] = list(replacement)
+                
+                text = ''.join(result)
+                
+        return text
+        
 
 # Example usage
 if __name__ == "__main__":

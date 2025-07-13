@@ -29,8 +29,13 @@ class TelegramHandler:
         self.llm_handler = LLMHandler()
         # Initialize storage for user PDF data
         self._user_pdf_data = {}
+        # Initialize user state tracking
+        self._user_states = {}
+        # Initialize important topics by user
+        self._important_topics = {}
     
-    async def send_message(self, chat_id: Union[str, int], text: str, parse_mode: str = "HTML") -> Dict[str, Any]:
+    async def send_message(self, chat_id: Union[str, int], text: str, parse_mode: str = "HTML", 
+                   keyboard: Optional[List[List[Dict[str, str]]]] = None) -> Dict[str, Any]:
         """
         Send a text message via Telegram.
         
@@ -38,6 +43,7 @@ class TelegramHandler:
             chat_id: Chat ID to send the message to
             text: Message content to send
             parse_mode: Message parsing mode (HTML or Markdown)
+            keyboard: Optional keyboard buttons
             
         Returns:
             Response from the Telegram API
@@ -50,6 +56,14 @@ class TelegramHandler:
                 "text": text,
                 "parse_mode": parse_mode
             }
+            
+            if keyboard:
+                reply_markup = {
+                    "keyboard": keyboard,
+                    "one_time_keyboard": True,
+                    "resize_keyboard": True
+                }
+                payload["reply_markup"] = reply_markup
             
             async with httpx.AsyncClient(timeout=30.0) as client:
                 response = await client.post(url, json=payload)
@@ -183,14 +197,30 @@ class TelegramHandler:
             chat_id: Chat ID to respond to
             command: Command text
         """
-        if command == "/start" or command == "/help":
+        if command == "/start":
+            # Reset user state
+            self._user_states[chat_id] = "awaiting_document"
+            
+            welcome_text = (
+                "👋 <b>Hello there! I'm SizaLM!</b>\n\n"
+                "I can help you analyze PDF documents, answer questions, and create summaries.\n\n"
+                "<b>Please send your documents!</b> 📄\n\n"
+                "After processing, I can:\n"
+                "• Answer specific questions about the content\n"
+                "• Create a comprehensive summary of the document\n"
+                "• Focus on important topics you specify"
+            )
+            await self.send_message(chat_id, welcome_text)
+        elif command == "/help":
             help_text = (
-                "👋 <b>Welcome to PDF Q&A Bot!</b>\n\n"
-                "I can help you analyze PDF documents and answer questions about their content.\n\n"
+                "👋 <b>Hello there! I'm SizaLM!</b>\n\n"
+                "I can help you analyze PDF documents and summarize their content.\n\n"
                 "<b>How to use me:</b>\n"
                 "1. Send me a PDF document 📄\n"
-                "2. Send me questions about the document 🤔\n\n"
-                "I'll extract information from the PDF and provide detailed answers to your questions."
+                "2. Choose either Q&A or Summarize mode\n"
+                "3. For Q&A: Ask me questions about the document 🤔\n"
+                "4. For Summarize: Optionally provide important topics to focus on\n\n"
+                "I'll extract information from the PDF and provide detailed answers or summaries."
             )
             await self.send_message(chat_id, help_text)
         else:
@@ -244,21 +274,61 @@ class TelegramHandler:
             await async_logger.info(f"Saving PDF to disk: {file_name} in {settings.UPLOAD_DIR}")
             filepath = await self.pdf_handler.save_pdf(file_content, file_name)
             
-            # Extract text from PDF
-            await async_logger.info(f"Extracting text from PDF: {filepath}")
-            pdf_text = await self.pdf_handler.extract_text(filepath)
-            await async_logger.info(f"Extracted {len(pdf_text)} characters from PDF")
+            # Get PDF metadata first
+            await async_logger.info(f"Getting PDF metadata: {filepath}")
+            pdf_metadata = await self.pdf_handler.get_pdf_metadata(filepath)
+            total_pages = pdf_metadata["total_pages"]
+            file_size_mb = pdf_metadata["file_size_mb"]
+            await async_logger.info(f"PDF metadata: {total_pages} pages, {file_size_mb:.2f} MB")
             
-            # Store the PDF text for this user (in-memory for this example)
-            # In a real app, you'd want to use a database for this
-            self._user_pdf_data[chat_id] = pdf_text
-            await async_logger.info(f"Stored PDF text for chat_id {chat_id}")
+            # Choose extraction method based on document size
+            if total_pages > 100:
+                # For large documents, use chunked processing
+                await self.send_message(
+                    chat_id,
+                    f"This is a large document ({total_pages} pages, {file_size_mb:.2f} MB). Processing in chunks for better results..."
+                )
+                
+                # Extract text in chunks
+                pdf_chunks = await self.pdf_handler.extract_text_chunked(filepath)
+                await async_logger.info(f"Extracted {len(pdf_chunks)} chunks from PDF")
+                
+                # Store chunked data for this user
+                self._user_pdf_data[chat_id] = {
+                    "type": "chunked",
+                    "chunks": pdf_chunks,
+                    "metadata": pdf_metadata
+                }
+                await async_logger.info(f"Stored chunked PDF data for chat_id {chat_id}")
+            else:
+                # For smaller documents, use normal processing
+                await async_logger.info(f"Extracting text from PDF: {filepath}")
+                pdf_text = await self.pdf_handler.extract_text(filepath)
+                await async_logger.info(f"Extracted {len(pdf_text)} characters from PDF")
+                
+                # Store the PDF text for this user
+                self._user_pdf_data[chat_id] = {
+                    "type": "full",
+                    "text": pdf_text,
+                    "metadata": pdf_metadata
+                }
+                await async_logger.info(f"Stored full PDF text for chat_id {chat_id}")
             
-            # Let the user know it's ready
-            await self.send_message(
-                chat_id,
-                f"✅ PDF processed successfully!\n\nNow you can ask me questions about the content of <b>{file_name}</b>."
+            # Let the user know it's ready and provide options
+            self._user_states[chat_id] = "awaiting_mode_selection"
+            options_text = (
+                f"✅ PDF processed successfully!\n\n"
+                f"<b>Document:</b> {file_name}\n\n"
+                f"Please select what you'd like to do with this document:"
             )
+            
+            # Create keyboard with options
+            keyboard = [
+                [{"text": "1️⃣ Q&A - Ask questions about the document"}],
+                [{"text": "2️⃣ Summarize - Generate a summary of the document"}]
+            ]
+            
+            await self.send_message(chat_id, options_text, keyboard=keyboard)
             
             # Clean up the PDF
             await self.pdf_handler.cleanup_pdf(filepath)
@@ -284,43 +354,144 @@ class TelegramHandler:
         if chat_id not in self._user_pdf_data:
             await self.send_message(
                 chat_id,
-                "Please send me a PDF document first, and then I can answer questions about it."
+                "Please send me a PDF document first by using the /start command."
             )
             return
         
+        # Get user's current state
+        user_state = self._user_states.get(chat_id, "awaiting_document")
+        
         try:
-            # Send acknowledgment
-            await self.send_message(
-                chat_id,
-                "Processing your questions... 🧠"
-            )
+            # Handle different states
+            if user_state == "awaiting_mode_selection":
+                # User is selecting between Q&A and Summarize
+                if text == "1" or text.lower() == "q&a":
+                    self._user_states[chat_id] = "qa_mode"
+                    await self.send_message(
+                        chat_id,
+                        "You've selected <b>Q&A mode</b>. Please ask me any questions about the document."
+                    )
+                elif text == "2" or text.lower() == "summarize":
+                    self._user_states[chat_id] = "awaiting_important_topics"
+                    await self.send_message(
+                        chat_id,
+                        "You've selected <b>Summarize mode</b>.\n\n"
+                        "I'll create a structured, exam-friendly summary with:\n"
+                        "• Major topics in bold headings\n"
+                        "• Subheadings for related subtopics\n"
+                        "• Bullet points with concise explanations\n"
+                        "• Key terms highlighted for easy revision\n\n"
+                        "Please enter a list of important topics to focus on in detail (8-mark level), with each topic on a new line.\n\n"
+                        "If you don't have any specific topics, just type 'proceed'."
+                    )
+                else:
+                    await self.send_message(
+                        chat_id,
+                        "Please select either:\n"
+                        "1️⃣ for Q&A mode\n"
+                        "2️⃣ for Summarize mode"
+                    )
             
-            # Parse questions from the message
-            pdf_text = self._user_pdf_data[chat_id]
-            important_questions = [text]  # Use the entire message as an important question
-            other_topics = []
+            elif user_state == "awaiting_important_topics":
+                # User is providing important topics for summarization
+                if text.lower() == "proceed":
+                    important_topics = []
+                    await self.send_message(
+                        chat_id,
+                        "No specific important topics provided. I'll create a balanced summary of all topics in the document."
+                    )
+                else:
+                    important_topics = [t.strip() for t in text.split('\n') if t.strip()]
+                    topics_list = "\n".join([f"• {topic}" for topic in important_topics])
+                    await self.send_message(
+                        chat_id,
+                        f"I'll focus on these important topics in the summary:\n\n{topics_list}"
+                    )
+                
+                # Store the important topics and proceed to summarization
+                self._important_topics[chat_id] = important_topics
+                await self.generate_summary(chat_id)
             
-            # Generate response using LLM
-            result = await self.llm_handler.generate_response(
-                pdf_text, 
-                important_questions,
-                other_topics
-            )
+            elif user_state == "qa_mode":
+                # User is asking questions in Q&A mode
+                await self.send_message(
+                    chat_id,
+                    "Processing your question... 🧠"
+                )
+                
+                pdf_data = self._user_pdf_data[chat_id]
+                important_questions = [text]  # Use the entire message as an important question
+                other_topics = []
+                
+                # Generate response using LLM based on data type
+                if pdf_data["type"] == "chunked":
+                    # For chunked data, we need a different approach
+                    await self.send_message(
+                        chat_id,
+                        "For large documents, I'll search through all sections to find relevant information..."
+                    )
+                    
+                    # Combine all chunks into a single response
+                    all_results = {"important_questions": {}, "other_topics": {}}
+                    chunks = pdf_data["chunks"]
+                    
+                    # Process chunks in batches to avoid memory issues
+                    batch_size = min(3, len(chunks))  # Process up to 3 chunks at a time
+                    
+                    for i in range(0, len(chunks), batch_size):
+                        batch_chunks = chunks[i:i+batch_size]
+                        for chunk in batch_chunks:
+                            chunk_text = chunk["text"]
+                            chunk_range = f"(pages {chunk['start_page']}-{chunk['end_page']})"
+                            
+                            # Process this chunk
+                            chunk_result = await self.llm_handler.generate_response(
+                                chunk_text,
+                                important_questions,
+                                other_topics
+                            )
+                            
+                            # Add page range information to answers
+                            for q, a in chunk_result["important_questions"].items():
+                                if a and not a.startswith("I couldn't generate"):
+                                    if q not in all_results["important_questions"]:
+                                        all_results["important_questions"][q] = f"{chunk_range}: {a}"
+                                    else:
+                                        all_results["important_questions"][q] += f"\n\n{chunk_range}: {a}"
+                    
+                    result = all_results
+                else:
+                    # For full text, use the standard approach
+                    pdf_text = pdf_data["text"]
+                    
+                    # Generate response using LLM
+                    result = await self.llm_handler.generate_response(
+                        pdf_text, 
+                        important_questions,
+                        other_topics
+                    )
+                
+                # Format the response using the template
+                formatted_response = ResponseTemplate.format_response(
+                    result["important_questions"], 
+                    result["other_topics"]
+                )
+                
+                # Send the response, splitting if needed
+                if len(formatted_response) > 4000:
+                    chunks = [formatted_response[i:i+4000] for i in range(0, len(formatted_response), 4000)]
+                    for chunk in chunks:
+                        await self.send_message(chat_id, chunk)
+                else:
+                    await self.send_message(chat_id, formatted_response)
             
-            # Format the response using the template
-            formatted_response = ResponseTemplate.format_response(
-                result["important_questions"], 
-                result["other_topics"]
-            )
-            
-            # Send the response
-            # Split long messages if needed (Telegram has a 4096 character limit)
-            if len(formatted_response) > 4000:
-                chunks = [formatted_response[i:i+4000] for i in range(0, len(formatted_response), 4000)]
-                for chunk in chunks:
-                    await self.send_message(chat_id, chunk)
             else:
-                await self.send_message(chat_id, formatted_response)
+                # Unknown state, reset to document upload
+                self._user_states[chat_id] = "awaiting_document"
+                await self.send_message(
+                    chat_id,
+                    "I'm not sure what to do next. Please send me a PDF document to start over."
+                )
                 
         except Exception as e:
             await async_logger.error(f"Error handling text message: {str(e)}")
@@ -422,3 +593,93 @@ class TelegramHandler:
             
             result = response.json()
             return result.get("result", [])
+    
+    async def generate_summary(self, chat_id: Union[str, int]) -> None:
+        """
+        Generate a summary of the document for a user.
+        
+        Args:
+            chat_id: Chat ID to respond to
+        """
+        try:
+            if chat_id not in self._user_pdf_data:
+                await self.send_message(
+                    chat_id,
+                    "Please send me a PDF document first before requesting a summary."
+                )
+                return
+                
+            pdf_data = self._user_pdf_data[chat_id]
+            important_topics = self._important_topics.get(chat_id, [])
+            
+            # Let the user know we're working on it
+            await self.send_message(
+                chat_id,
+                "Generating summary of the document... 🧠\n\n"
+                "This may take a moment depending on the size of the document."
+            )
+            
+            # Generate summary using LLM based on data type
+            await async_logger.info(f"Generating summary for chat_id={chat_id} with {len(important_topics)} important topics")
+            
+            summary_result = None
+            
+            if pdf_data["type"] == "chunked":
+                # For chunked data, use the chunked summary method
+                chunks = pdf_data["chunks"]
+                metadata = pdf_data["metadata"]
+                total_pages = metadata["total_pages"]
+                
+                await self.send_message(
+                    chat_id,
+                    f"Processing large document ({total_pages} pages) in chunks for comprehensive summary...\n"
+                    f"This may take several minutes. I'll update you on the progress."
+                )
+                
+                # Call our chunked summarization method
+                summary_result = await self.llm_handler.generate_summary_from_chunks(chunks, important_topics)
+                
+            else:
+                # For full text, use the standard summary method
+                pdf_text = pdf_data["text"]
+                
+                # Call our standard summarization method
+                summary_result = await self.llm_handler.generate_summary(pdf_text, important_topics)
+            
+            # Send the summary response
+            await self.send_message(
+                chat_id,
+                "📝 <b>EXAM-READY DOCUMENT SUMMARY</b>\n\n"
+                "Here is your structured, exam-friendly summary with hierarchical organization:\n"
+                "• Major topics appear as <b><u>UNDERLINED HEADINGS</u></b>\n"
+                "• Subheadings organize related concepts\n"
+                "• <b>Key terms</b> are highlighted for quick revision\n"
+                "• Important topics you specified are explained in detail (8-mark level)\n"
+                "• Other topics are summarized concisely (4-mark level)\n"
+            )
+            
+            # Format the summary using the template
+            from config.response_template import ResponseTemplate
+            formatted_summary = ResponseTemplate.format_summary(summary_result)
+            
+            # Split long messages if needed (Telegram has a 4096 character limit)
+            if len(formatted_summary) > 4000:
+                chunks = [formatted_summary[i:i+4000] for i in range(0, len(formatted_summary), 4000)]
+                for chunk in chunks:
+                    await self.send_message(chat_id, chunk)
+            else:
+                await self.send_message(chat_id, formatted_summary)
+                
+            # Reset to Q&A mode after sending summary
+            self._user_states[chat_id] = "qa_mode"
+            await self.send_message(
+                chat_id,
+                "You can now ask me specific questions about the document, or send /start to process another document."
+            )
+                
+        except Exception as e:
+            await async_logger.error(f"Error generating summary: {str(e)}")
+            await self.send_message(
+                chat_id,
+                "Sorry, I encountered an error while generating the summary. Please try again."
+            )

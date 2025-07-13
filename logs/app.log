@@ -107,3 +107,525 @@
 2025-07-10 12:21:30 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
 2025-07-10 12:21:31 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
 2025-07-10 12:22:42 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 12:54:54 | INFO     | __main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:54:54 | INFO     | __main__:<module>:65 - Telegram bot thread started
+2025-07-10 12:54:54 | INFO     | __main__:start_telegram_bot:35 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 12:54:54 | INFO     | utils.logging:info:54 - Ensured upload directory exists: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:54:54 | INFO     | utils.logging:info:54 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 12:54:57 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:54:57 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:54:57 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 12:55:02 | INFO     | utils.logging:info:54 - Bot connected successfully: @SizaLMbot
+2025-07-10 12:55:02 | INFO     | utils.logging:info:54 - Bot details: {'id': 7967112184, 'is_bot': True, 'first_name': 'Siza', 'username': 'SizaLMbot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False, 'can_connect_to_business': False, 'has_main_web_app': False}
+2025-07-10 12:55:17 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:55:17 | INFO     | utils.logging:info:54 - Processing update ID: 803931086
+2025-07-10 12:55:17 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:55:17 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 12:55:19 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:55:40 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:55:40 | INFO     | utils.logging:info:54 - Processing update ID: 803931087
+2025-07-10 12:55:40 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:55:40 | INFO     | utils.logging:info:54 - Received document: Muhammed_Sinan_D.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAAMYaG9q88JEpgFZLm0bAuGL5MXVejsAAjkYAALPBXlXY8uylYPT4kI2BA
+2025-07-10 12:55:40 | INFO     | utils.logging:info:54 - Processing PDF document: Muhammed_Sinan_D.pdf
+2025-07-10 12:55:41 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:55:41 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAAMYaG9q88JEpgFZLm0bAuGL5MXVejsAAjkYAALPBXlXY8uylYPT4kI2BA, file_name=Muhammed_Sinan_D.pdf, chat_id=1550263754
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAAMYaG9q88JEpgFZLm0bAuGL5MXVejsAAjkYAALPBXlXY8uylYPT4kI2BA
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - Downloaded PDF content: 167382 bytes
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - Saving PDF to disk: Muhammed_Sinan_D.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - Extracted 5564 characters from PDF
+2025-07-10 12:55:44 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 12:55:45 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:55:45 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:55:45 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/Muhammed_Sinan_D.pdf
+2025-07-10 12:55:51 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:55:51 | INFO     | utils.logging:info:54 - Processing update ID: 803931088
+2025-07-10 12:55:51 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:55:51 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 12:55:52 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:55:59 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:55:59 | INFO     | utils.logging:info:54 - Processing update ID: 803931089
+2025-07-10 12:55:59 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:55:59 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 12:56:00 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:56:08 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:56:08 | INFO     | utils.logging:info:54 - Processing update ID: 803931090
+2025-07-10 12:56:08 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:56:08 | INFO     | utils.logging:info:54 - Received text message: proceed...
+2025-07-10 12:56:10 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:56:11 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:56:11 | INFO     | utils.logging:info:54 - Generating summary for chat_id=1550263754 with 0 important topics
+2025-07-10 12:56:17 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 12:56:17 | INFO     | utils.logging:info:54 - Generated summary with 2811 characters
+2025-07-10 12:56:20 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:56:28 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:56:31 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:57:10 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:57:10 | INFO     | utils.logging:info:54 - Processing update ID: 803931091
+2025-07-10 12:57:10 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:57:10 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 12:57:11 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:57:47 | ERROR    | utils.logging:error:59 - Error polling updates: 
+2025-07-10 12:59:00 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:59:00 | INFO     | utils.logging:info:54 - Processing update ID: 803931092
+2025-07-10 12:59:00 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:59:00 | INFO     | utils.logging:info:54 - Received document: oopj-module-2-chapter-3-note (1).pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAAMnaG9rvMjsGG4NMktB31tyTfV5dYIAAkEYAALPBXlX1HuUJeR7RMg2BA
+2025-07-10 12:59:00 | INFO     | utils.logging:info:54 - Processing PDF document: oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 12:59:01 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:59:01 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAAMnaG9rvMjsGG4NMktB31tyTfV5dYIAAkEYAALPBXlX1HuUJeR7RMg2BA, file_name=oopj-module-2-chapter-3-note (1).pdf, chat_id=1550263754
+2025-07-10 12:59:15 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAAMnaG9rvMjsGG4NMktB31tyTfV5dYIAAkEYAALPBXlX1HuUJeR7RMg2BA
+2025-07-10 12:59:15 | INFO     | utils.logging:info:54 - Downloaded PDF content: 1271696 bytes
+2025-07-10 12:59:15 | INFO     | utils.logging:info:54 - Saving PDF to disk: oopj-module-2-chapter-3-note (1).pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 12:59:15 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 12:59:15 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 12:59:16 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 12:59:16 | INFO     | utils.logging:info:54 - Extracted 11444 characters from PDF
+2025-07-10 12:59:16 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 12:59:16 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:59:16 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 12:59:16 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 12:59:22 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:59:22 | INFO     | utils.logging:info:54 - Processing update ID: 803931093
+2025-07-10 12:59:22 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:59:22 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 12:59:23 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 12:59:27 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 12:59:27 | INFO     | utils.logging:info:54 - Processing update ID: 803931094
+2025-07-10 12:59:27 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 12:59:27 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 12:59:28 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:00:06 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:00:06 | INFO     | utils.logging:info:54 - Processing update ID: 803931095
+2025-07-10 13:00:06 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:00:06 | INFO     | utils.logging:info:54 - Received text message: Super keyword...
+2025-07-10 13:00:07 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:00:09 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:00:09 | INFO     | utils.logging:info:54 - Generating summary for chat_id=1550263754 with 1 important topics
+2025-07-10 13:00:12 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 13:00:12 | INFO     | utils.logging:info:54 - Generated summary with 3311 characters
+2025-07-10 13:00:13 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:00:15 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:00:16 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:03:30 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:03:31 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:03:31 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:03:31 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:04:37 | ERROR    | utils.logging:error:59 - Error polling updates: 
+2025-07-10 13:05:06 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:05:07 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:05:07 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:05:07 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:05:38 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:05:39 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:05:39 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:05:39 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:06:01 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:06:02 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:06:02 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:06:02 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:06:40 | INFO     | __main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:06:40 | INFO     | __main__:<module>:65 - Telegram bot thread started
+2025-07-10 13:06:40 | INFO     | __main__:start_telegram_bot:35 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:06:40 | INFO     | utils.logging:info:54 - Ensured upload directory exists: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:06:40 | INFO     | utils.logging:info:54 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:06:41 | INFO     | utils.logging:info:54 - Bot connected successfully: @SizaLMbot
+2025-07-10 13:06:41 | INFO     | utils.logging:info:54 - Bot details: {'id': 7967112184, 'is_bot': True, 'first_name': 'Siza', 'username': 'SizaLMbot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False, 'can_connect_to_business': False, 'has_main_web_app': False}
+2025-07-10 13:06:42 | ERROR    | utils.logging:error:59 - Error polling updates: Client error '409 Conflict' for url 'https://api.telegram.org/bot7967112184:AAGkALZutcIY_3TlZf8zEiOckncGhlysti8/getUpdates?offset=803931096&timeout=30&allowed_updates=message'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409
+2025-07-10 13:06:48 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:07:05 | INFO     | __main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:07:05 | INFO     | __main__:<module>:65 - Telegram bot thread started
+2025-07-10 13:07:05 | INFO     | __main__:start_telegram_bot:35 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:07:05 | INFO     | utils.logging:info:54 - Ensured upload directory exists: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:07:05 | INFO     | utils.logging:info:54 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:07:08 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:07:08 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:07:08 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:07:09 | INFO     | utils.logging:info:54 - Bot connected successfully: @SizaLMbot
+2025-07-10 13:07:09 | INFO     | utils.logging:info:54 - Bot details: {'id': 7967112184, 'is_bot': True, 'first_name': 'Siza', 'username': 'SizaLMbot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False, 'can_connect_to_business': False, 'has_main_web_app': False}
+2025-07-10 13:07:19 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:07:19 | INFO     | utils.logging:info:54 - Processing update ID: 803931096
+2025-07-10 13:07:19 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:07:19 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:07:21 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:08:07 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:08:07 | INFO     | utils.logging:info:54 - Processing update ID: 803931097
+2025-07-10 13:08:07 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:08:07 | INFO     | utils.logging:info:54 - Received document: oopj-module-2-chapter-3-note (1).pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAAM2aG9t32G6uqbYtF_Jc3vDhmKg-IcAAmAYAALPBXlXnhhxkNniNwI2BA
+2025-07-10 13:08:07 | INFO     | utils.logging:info:54 - Processing PDF document: oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 13:08:08 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:08:08 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAAM2aG9t32G6uqbYtF_Jc3vDhmKg-IcAAmAYAALPBXlXnhhxkNniNwI2BA, file_name=oopj-module-2-chapter-3-note (1).pdf, chat_id=1550263754
+2025-07-10 13:08:32 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAAM2aG9t32G6uqbYtF_Jc3vDhmKg-IcAAmAYAALPBXlXnhhxkNniNwI2BA
+2025-07-10 13:08:32 | INFO     | utils.logging:info:54 - Downloaded PDF content: 1271696 bytes
+2025-07-10 13:08:32 | INFO     | utils.logging:info:54 - Saving PDF to disk: oopj-module-2-chapter-3-note (1).pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:08:32 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 13:08:32 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 13:08:33 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 13:08:33 | INFO     | utils.logging:info:54 - Extracted 11444 characters from PDF
+2025-07-10 13:08:33 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 13:08:33 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:08:33 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 13:08:33 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/oopj-module-2-chapter-3-note (1).pdf
+2025-07-10 13:08:36 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:08:36 | INFO     | utils.logging:info:54 - Processing update ID: 803931098
+2025-07-10 13:08:36 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:08:36 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 13:08:38 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:08:40 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:08:40 | INFO     | utils.logging:info:54 - Processing update ID: 803931099
+2025-07-10 13:08:40 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:08:40 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 13:08:41 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:08:52 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:08:52 | INFO     | utils.logging:info:54 - Processing update ID: 803931100
+2025-07-10 13:08:52 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:08:52 | INFO     | utils.logging:info:54 - Received text message: Super keyword...
+2025-07-10 13:08:53 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:08:54 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:08:54 | INFO     | utils.logging:info:54 - Generating summary for chat_id=1550263754 with 1 important topics
+2025-07-10 13:08:58 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 13:08:58 | INFO     | utils.logging:info:54 - Generated summary with 3692 characters
+2025-07-10 13:08:59 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:09:01 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:09:02 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:11:44 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:11:45 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:11:45 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:11:45 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:12:28 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:12:29 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:12:29 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:12:29 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:12:58 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:12:59 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:12:59 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:12:59 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:13:21 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:13:25 | INFO     | __main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:13:25 | INFO     | __main__:<module>:65 - Telegram bot thread started
+2025-07-10 13:13:25 | INFO     | __main__:start_telegram_bot:35 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:13:25 | INFO     | utils.logging:info:54 - Ensured upload directory exists: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:13:25 | INFO     | utils.logging:info:54 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:13:26 | INFO     | utils.logging:info:54 - Bot connected successfully: @SizaLMbot
+2025-07-10 13:13:26 | INFO     | utils.logging:info:54 - Bot details: {'id': 7967112184, 'is_bot': True, 'first_name': 'Siza', 'username': 'SizaLMbot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False, 'can_connect_to_business': False, 'has_main_web_app': False}
+2025-07-10 13:13:28 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:13:28 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:13:28 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:13:31 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:13:31 | INFO     | utils.logging:info:54 - Processing update ID: 803931101
+2025-07-10 13:13:31 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:13:31 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:13:32 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:14:16 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:14:16 | INFO     | utils.logging:info:54 - Processing update ID: 803931102
+2025-07-10 13:14:16 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:14:16 | INFO     | utils.logging:info:54 - Received document: OS -M3.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAANFaG9vT6VV0z4Q3Ziu7Jvkl93gmpUAAmIYAALPBXlX_tgUUYh0YHE2BA
+2025-07-10 13:14:16 | INFO     | utils.logging:info:54 - Processing PDF document: OS -M3.pdf
+2025-07-10 13:14:16 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:14:16 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAANFaG9vT6VV0z4Q3Ziu7Jvkl93gmpUAAmIYAALPBXlX_tgUUYh0YHE2BA, file_name=OS -M3.pdf, chat_id=1550263754
+2025-07-10 13:14:28 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAANFaG9vT6VV0z4Q3Ziu7Jvkl93gmpUAAmIYAALPBXlX_tgUUYh0YHE2BA
+2025-07-10 13:14:28 | INFO     | utils.logging:info:54 - Downloaded PDF content: 12718078 bytes
+2025-07-10 13:14:28 | INFO     | utils.logging:info:54 - Saving PDF to disk: OS -M3.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:14:28 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/OS -M3.pdf
+2025-07-10 13:14:28 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/OS -M3.pdf
+2025-07-10 13:14:29 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/OS -M3.pdf
+2025-07-10 13:14:29 | INFO     | utils.logging:info:54 - Extracted 1568 characters from PDF
+2025-07-10 13:14:29 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 13:14:29 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:14:29 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/OS -M3.pdf
+2025-07-10 13:14:29 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/OS -M3.pdf
+2025-07-10 13:15:39 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:15:39 | INFO     | utils.logging:info:54 - Processing update ID: 803931103
+2025-07-10 13:15:39 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:15:39 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:15:41 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:16:15 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:16:15 | INFO     | utils.logging:info:54 - Processing update ID: 803931104
+2025-07-10 13:16:15 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:16:15 | INFO     | utils.logging:info:54 - Received document: M3.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA
+2025-07-10 13:16:15 | INFO     | utils.logging:info:54 - Processing PDF document: M3.pdf
+2025-07-10 13:16:16 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:16:16 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA, file_name=M3.pdf, chat_id=1550263754
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - Downloaded PDF content: 2162700 bytes
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - Saving PDF to disk: M3.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - Extracted 41052 characters from PDF
+2025-07-10 13:16:40 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 13:16:44 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:16:44 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:16:44 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:16:59 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:16:59 | INFO     | utils.logging:info:54 - Processing update ID: 803931105
+2025-07-10 13:16:59 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:16:59 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 13:17:02 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:17:12 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:17:12 | INFO     | utils.logging:info:54 - Processing update ID: 803931106
+2025-07-10 13:17:12 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:17:12 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 13:17:14 | ERROR    | utils.logging:error:59 - Error sending Telegram message: 
+2025-07-10 13:17:14 | ERROR    | utils.logging:error:59 - Error handling text message: 
+2025-07-10 13:17:25 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:18:10 | ERROR    | utils.logging:error:59 - Error polling updates: 
+2025-07-10 13:19:01 | ERROR    | utils.logging:error:59 - Error polling updates: 
+2025-07-10 13:19:22 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:19:22 | INFO     | utils.logging:info:54 - Processing update ID: 803931107
+2025-07-10 13:19:22 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:19:22 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 13:19:28 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:19:28 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:19:28 | INFO     | utils.logging:info:54 - Generating summary for chat_id=1550263754 with 1 important topics
+2025-07-10 13:19:33 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 13:19:33 | INFO     | utils.logging:info:54 - Generated summary with 3443 characters
+2025-07-10 13:19:33 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:19:34 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:19:35 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:19:36 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:19:36 | INFO     | utils.logging:info:54 - Processing update ID: 803931108
+2025-07-10 13:19:36 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:19:36 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 13:19:37 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:19:37 | ERROR    | utils.logging:error:59 - Error calling Groq API: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2025-07-10 13:19:37 | ERROR    | utils.logging:error:59 - Error generating response: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2025-07-10 13:19:40 | ERROR    | utils.logging:error:59 - Error calling Groq API: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2025-07-10 13:19:40 | ERROR    | utils.logging:error:59 - Error generating response: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2025-07-10 13:19:42 | ERROR    | utils.logging:error:59 - Error calling Groq API: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2025-07-10 13:19:42 | ERROR    | utils.logging:error:59 - Error generating response: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+2025-07-10 13:19:42 | ERROR    | utils.logging:error:59 - Error handling text message: RetryError[<Future at 0x76cd736e75b0 state=finished raised HTTPStatusError>]
+2025-07-10 13:19:43 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:19:44 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:19:44 | INFO     | utils.logging:info:54 - Processing update ID: 803931109
+2025-07-10 13:19:44 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:19:44 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:19:45 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:01 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:20:01 | INFO     | utils.logging:info:54 - Processing update ID: 803931110
+2025-07-10 13:20:01 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:20:01 | INFO     | utils.logging:info:54 - Received document: M3.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA
+2025-07-10 13:20:01 | INFO     | utils.logging:info:54 - Processing PDF document: M3.pdf
+2025-07-10 13:20:02 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:02 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA, file_name=M3.pdf, chat_id=1550263754
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - Downloaded PDF content: 2162700 bytes
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - Saving PDF to disk: M3.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - Extracted 41052 characters from PDF
+2025-07-10 13:20:15 | INFO     | utils.logging:info:54 - Stored PDF text for chat_id 1550263754
+2025-07-10 13:20:16 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:16 | INFO     | utils.logging:info:54 - PDF deleted: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:20:16 | INFO     | utils.logging:info:54 - Cleaned up PDF file: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:20:18 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:20:18 | INFO     | utils.logging:info:54 - Processing update ID: 803931111
+2025-07-10 13:20:18 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:20:18 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 13:20:19 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:21 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:20:21 | INFO     | utils.logging:info:54 - Processing update ID: 803931112
+2025-07-10 13:20:21 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:20:21 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 13:20:23 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:28 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:20:28 | INFO     | utils.logging:info:54 - Processing update ID: 803931113
+2025-07-10 13:20:28 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:20:28 | INFO     | utils.logging:info:54 - Received text message: Deadlock prevention...
+2025-07-10 13:20:30 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:31 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:31 | INFO     | utils.logging:info:54 - Generating summary for chat_id=1550263754 with 1 important topics
+2025-07-10 13:20:36 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 13:20:36 | INFO     | utils.logging:info:54 - Generated summary with 2984 characters
+2025-07-10 13:20:37 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:38 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:20:39 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:23:39 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:23:40 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:23:40 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:23:40 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:25:24 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:25:25 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:25:25 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:25:25 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:26:12 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:26:13 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:26:13 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:26:13 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:26:36 | ERROR    | utils.logging:error:59 - Error polling updates: 
+2025-07-10 13:26:54 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:26:55 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:26:55 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:26:55 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:28:08 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:28:09 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:28:09 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:28:09 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:28:44 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:28:48 | INFO     | __main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:28:48 | INFO     | __main__:<module>:65 - Telegram bot thread started
+2025-07-10 13:28:48 | INFO     | __main__:start_telegram_bot:35 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:28:48 | INFO     | utils.logging:info:54 - Ensured upload directory exists: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:28:48 | INFO     | utils.logging:info:54 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:28:49 | INFO     | utils.logging:info:54 - Bot connected successfully: @SizaLMbot
+2025-07-10 13:28:49 | INFO     | utils.logging:info:54 - Bot details: {'id': 7967112184, 'is_bot': True, 'first_name': 'Siza', 'username': 'SizaLMbot', 'can_join_groups': True, 'can_read_all_group_messages': False, 'supports_inline_queries': False, 'can_connect_to_business': False, 'has_main_web_app': False}
+2025-07-10 13:28:51 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:28:51 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:28:51 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:29:04 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:29:04 | INFO     | utils.logging:info:54 - Processing update ID: 803931114
+2025-07-10 13:29:04 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:29:04 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:29:06 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:13 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:29:13 | INFO     | utils.logging:info:54 - Processing update ID: 803931115
+2025-07-10 13:29:13 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:29:13 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 13:29:14 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:21 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:29:21 | INFO     | utils.logging:info:54 - Processing update ID: 803931116
+2025-07-10 13:29:21 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:29:21 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:29:22 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:29 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:29:29 | INFO     | utils.logging:info:54 - Processing update ID: 803931117
+2025-07-10 13:29:29 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:29:29 | INFO     | utils.logging:info:54 - Received document: M3.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA
+2025-07-10 13:29:29 | INFO     | utils.logging:info:54 - Processing PDF document: M3.pdf
+2025-07-10 13:29:30 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:30 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA, file_name=M3.pdf, chat_id=1550263754
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAANKaG9vx25ICMbUjhAzZyukzWnwtXoAAmMYAALPBXlXqULyjx9qQ2Q2BA
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Downloaded PDF content: 2162700 bytes
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Saving PDF to disk: M3.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Getting PDF metadata: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Extracted metadata from PDF: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - PDF metadata: 41 pages, 2.06 MB
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/M3.pdf
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Extracted 41052 characters from PDF
+2025-07-10 13:29:34 | INFO     | utils.logging:info:54 - Stored full PDF text for chat_id 1550263754
+2025-07-10 13:29:35 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:35 | ERROR    | utils.logging:error:59 - Error processing PDF: 'PDFHandler' object has no attribute 'cleanup_pdf'
+2025-07-10 13:29:35 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:37 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:29:37 | INFO     | utils.logging:info:54 - Processing update ID: 803931118
+2025-07-10 13:29:37 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:29:37 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 13:29:37 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:40 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:29:40 | INFO     | utils.logging:info:54 - Processing update ID: 803931119
+2025-07-10 13:29:40 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:29:40 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 13:29:41 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:47 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:29:47 | INFO     | utils.logging:info:54 - Processing update ID: 803931120
+2025-07-10 13:29:47 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:29:47 | INFO     | utils.logging:info:54 - Received text message: deadlock...
+2025-07-10 13:29:48 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:49 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:49 | INFO     | utils.logging:info:54 - Generating summary for chat_id=1550263754 with 1 important topics
+2025-07-10 13:29:54 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 13:29:54 | INFO     | utils.logging:info:54 - Generated summary with 3829 characters
+2025-07-10 13:29:55 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:56 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:57 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:29:58 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:33:16 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:33:16 | INFO     | utils.logging:info:54 - Processing update ID: 803931121
+2025-07-10 13:33:16 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:33:16 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:33:17 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:33:31 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:33:31 | INFO     | utils.logging:info:54 - Processing update ID: 803931122
+2025-07-10 13:33:31 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:33:31 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:33:32 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:17 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:34:17 | INFO     | utils.logging:info:54 - Processing update ID: 803931123
+2025-07-10 13:34:17 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:34:17 | INFO     | utils.logging:info:54 - Received document: InPrincipalOffer.pdf, mime_type: application/pdf, file_id: BQACAgUAAxkBAAOCaG90AUaP5tepnQY3YG37WaQSLVIAAnEYAALPBXlXQLu_ruOjB3U2BA
+2025-07-10 13:34:17 | INFO     | utils.logging:info:54 - Processing PDF document: InPrincipalOffer.pdf
+2025-07-10 13:34:19 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:19 | INFO     | utils.logging:info:54 - Downloading document with file_id=BQACAgUAAxkBAAOCaG90AUaP5tepnQY3YG37WaQSLVIAAnEYAALPBXlXQLu_ruOjB3U2BA, file_name=InPrincipalOffer.pdf, chat_id=1550263754
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - File downloaded from Telegram: BQACAgUAAxkBAAOCaG90AUaP5tepnQY3YG37WaQSLVIAAnEYAALPBXlXQLu_ruOjB3U2BA
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Downloaded PDF content: 87578 bytes
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Saving PDF to disk: InPrincipalOffer.pdf in /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - PDF saved: /home/zero/VSC/projectSIZA/uploads/InPrincipalOffer.pdf
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Getting PDF metadata: /home/zero/VSC/projectSIZA/uploads/InPrincipalOffer.pdf
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Extracted metadata from PDF: /home/zero/VSC/projectSIZA/uploads/InPrincipalOffer.pdf
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - PDF metadata: 1 pages, 0.08 MB
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Extracting text from PDF: /home/zero/VSC/projectSIZA/uploads/InPrincipalOffer.pdf
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Text extracted from PDF: /home/zero/VSC/projectSIZA/uploads/InPrincipalOffer.pdf
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Extracted 2024 characters from PDF
+2025-07-10 13:34:21 | INFO     | utils.logging:info:54 - Stored full PDF text for chat_id 1550263754
+2025-07-10 13:34:22 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:22 | ERROR    | utils.logging:error:59 - Error processing PDF: 'PDFHandler' object has no attribute 'cleanup_pdf'
+2025-07-10 13:34:23 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:25 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:34:25 | INFO     | utils.logging:info:54 - Processing update ID: 803931124
+2025-07-10 13:34:25 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:34:25 | INFO     | utils.logging:info:54 - Received text message: 2️⃣ Summarize - Gene...
+2025-07-10 13:34:26 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:30 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:34:30 | INFO     | utils.logging:info:54 - Processing update ID: 803931125
+2025-07-10 13:34:30 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:34:30 | INFO     | utils.logging:info:54 - Received text message: 2...
+2025-07-10 13:34:31 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:37 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:34:37 | INFO     | utils.logging:info:54 - Processing update ID: 803931126
+2025-07-10 13:34:37 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:34:37 | INFO     | utils.logging:info:54 - Received text message: proceed...
+2025-07-10 13:34:38 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:39 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:39 | INFO     | utils.logging:info:54 - Generating summary for chat_id=1550263754 with 0 important topics
+2025-07-10 13:34:41 | INFO     | utils.logging:info:54 - Successfully received response from Groq API
+2025-07-10 13:34:41 | INFO     | utils.logging:info:54 - Generated summary with 1245 characters
+2025-07-10 13:34:42 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:43 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:34:45 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:35:02 | INFO     | utils.logging:info:54 - Received 1 updates from Telegram
+2025-07-10 13:35:02 | INFO     | utils.logging:info:54 - Processing update ID: 803931127
+2025-07-10 13:35:02 | INFO     | utils.logging:info:54 - Received message from chat_id=1550263754, username=@ilostzero
+2025-07-10 13:35:02 | INFO     | utils.logging:info:54 - Received text message: /start...
+2025-07-10 13:35:04 | INFO     | utils.logging:info:54 - Message sent to Telegram chat 1550263754
+2025-07-10 13:36:50 | ERROR    | utils.logging:error:59 - Error polling updates: 
+2025-07-10 13:37:15 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:37:40 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:38:05 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:38:30 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:38:55 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:39:21 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:39:46 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:39:55 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:39:56 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:39:56 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:39:56 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:40:11 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:40:20 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:40:21 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:40:21 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:40:21 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:40:36 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:41:01 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:41:06 | ERROR    | utils.logging:error:59 - Error polling updates: [Errno -2] Name or service not known
+2025-07-10 13:41:15 | INFO     | app.app:shutdown_event:54 - Shutting down WhatsApp PDF Bot service
+2025-07-10 13:41:30 | INFO     | __main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:41:30 | INFO     | __main__:<module>:65 - Telegram bot thread started
+2025-07-10 13:41:30 | INFO     | __main__:start_telegram_bot:35 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:41:30 | INFO     | utils.logging:info:54 - Ensured upload directory exists: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:41:30 | INFO     | utils.logging:info:54 - Starting Telegram bot polling with token: 79671...ysti8
+2025-07-10 13:41:33 | INFO     | __mp_main__:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:41:33 | INFO     | main:<module>:23 - Upload directory ensured at: /home/zero/VSC/projectSIZA/uploads
+2025-07-10 13:41:33 | INFO     | app.app:startup_event:49 - Starting Telegram PDF Bot service
+2025-07-10 13:41:41 | ERROR    | utils.logging:error:59 - Failed to verify bot token: 
+2025-07-10 13:41:41 | ERROR    | utils.logging:error:59 - Telegram bot initialization failed! Please check your token.
